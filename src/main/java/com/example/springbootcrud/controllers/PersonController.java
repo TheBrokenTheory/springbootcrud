@@ -23,9 +23,9 @@ public class PersonController {
     }
 
     @GetMapping
-    @RequestMapping("/{id}")
+    @RequestMapping("{id}")
     public Person get(@PathVariable Integer id) {
-        return personRepository.getById(id);
+        return personRepository.getOne(id);
     }
 
     @PostMapping
